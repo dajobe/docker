@@ -2,6 +2,19 @@
 
 . /build/config.sh
 
+# Or could install Oracle Java 7
+#
+# https://github.com/dockerfile/java/blob/master/oracle-java7/Dockerfile
+#
+# FROM dockerfile/java:oracle-java7
+#
+# or extract it out:
+#  echo oracle-java7-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections
+#  add-apt-repository -y ppa:webupd8team/java
+#  apt-get update
+#  apt-get install -y oracle-java7-installer
+
+
 # Update the package repository
 apt-get update
 
