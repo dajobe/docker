@@ -17,5 +17,5 @@ Run it detached and export all ports (8080, 28015, 29015) to host.
 
 On OSX with boot2docker
 
-    $ ip=`boot2docker ip
+    $ ip=`boot2docker ip`
     $ open http://$ip:8080
