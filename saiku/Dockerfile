@@ -1,8 +1,6 @@
-# https://github.com/OSBI/saiku
-# https://docs.docker.com/articles/dockerfile_best-practices/
-
-# FROM java:7-jre
 FROM dajobe/java
+
+MAINTAINER Dave Beckett <dave@dajobe.org>
 
 WORKDIR /usr/src
 
@@ -14,4 +12,5 @@ RUN curl -L -o saiku.tar.gz \
 
 EXPOSE 8080
 
-CMD /usr/src/saiku-server/start-saiku.sh && tail -f /usr/src/saiku-server/tomcat/logs/catalina.out
+CMD /usr/src/saiku-server/start-saiku.sh \
+    && tail -f /usr/src/saiku-server/tomcat/logs/catalina.out
